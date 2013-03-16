@@ -3,9 +3,9 @@ $baseFontFamily: Oxygen;
 @import url(http://fonts.googleapis.com/css?family=Oxygen);
 */
 
-$btnPrimaryBackground: green;
-$navbarBackgroundHighlight: white;
-$navbarBackground: white;
+$btnPrimaryBackground: red;
+$navbarBackgroundHighlight: black;
+$navbarBackground: black;
 @import 'bootstrap';
 body {
 	padding-top: 60px;
