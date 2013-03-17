@@ -1,3 +1,13 @@
+<% if user_signed_in? %>
+<div class="hero-unit">
+<h1>Welcome to your member page!</h1>
+<p>
+Future content will go here
+</p>
+
+
+<% else %>
+
 <div class="hero-unit">
 <h1>Welcome to One Month Rails!</h1>
 <p>
@@ -8,6 +18,8 @@
 </p>
 
 <p>
-<%= link_to "Sign Up Now!", "#", class: "btn btn-primary btn-large" %>
+<%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large" %>
 </p>
 </div>
+
+<% end %>
