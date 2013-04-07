@@ -66,5 +66,15 @@ Omrails::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
     # In production set host to actual host 
-  config.action_mailer.default_url_options = { :host => 'islandstyle.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'ibis.herokuapp.com' }
+
+# Configuring amazon s3 for Paperclip file uploads
+config.paperclip_defaults = {
+  :storage => :s3,
+  :s3_credentials => {
+    :bucket => ENV['AWS_BUCKET'],
+    :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+  }
+}
 end
